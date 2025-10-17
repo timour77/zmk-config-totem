@@ -19,7 +19,23 @@ config ZMK_SPLIT_ROLE_PERIPHERAL
 
 endif
 
-if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+if SHIELD_TOTEM_CLEAR_BONDING
+
+config ZMK_SPLIT_ROLE_PERIPHERAL
+    bool
+    default y
+
+config ZMK_BLE_CLEAR_BONDS_ON_START
+    bool
+    default y
+
+config ZMK_BLE_CLEAR_BONDS_ON_BOOT
+    bool
+    default y
+
+endif
+
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_CLEAR_BONDING
 
 config ZMK_SPLIT
     default y
