@@ -21,7 +21,6 @@
 #define ADJ  3
 #define TVP1 4
 #define TVP2 5
-#define WIN_OVERRIDE 6
 
 &mt {
     quick-tap-ms = <100>;
@@ -64,13 +63,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        win_profile {
-            if-bt-profile = <1>;
-            then-layer = <WIN_OVERRIDE>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -240,17 +232,5 @@
             >;
         };
 
-        // Windows override layer: maps LGUI/RGUI to LCTRL/RCTRL when BT profile 1 (Windows) is active
-        // This layer overrides Command keys (LGUI/RGUI) to Ctrl keys (LCTRL/RCTRL) for Windows compatibility
-        // Profile 0 (Mac): LGUI/RGUI work as Command
-        // Profile 1 (Windows): LGUI/RGUI become LCTRL/RCTRL
-        win_override {
-            bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &mt LCTRL A  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt RCTRL O
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp LCTRL  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
