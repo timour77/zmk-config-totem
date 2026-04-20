@@ -30,18 +30,86 @@
 };
 
 / {
+    behaviors {
+        hrm_pinky: home_row_mod_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrm_middle: home_row_mod_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrm_index: home_row_mod_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
-        enter_pw {
+        combo_jk_escape {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_df_capsword {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&caps_word>;
+        };
+
+        combo_sd_enter {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp RET>;
+        };
+
+        combo_m_comma_backspace {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp BSPC>;
+        };
+
+        combo_qw_tab {
             timeout-ms = <50>;
             key-positions = <0 1>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_vb_delete {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&kp DEL>;
+        };
+
+        enter_pw {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
             bindings = <&pw>;
         };
 
         change_language {
             bindings = <&change_language>;
-            key-positions = <3 4>;
+            key-positions = <5 6>;
         };
     };
 
@@ -69,10 +137,10 @@
 
         mac_base {
             bindings = <
-                &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O    &kp P
-                &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J      &kp K      &kp L    &kp SEMI
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                              &kp LGUI  &lt 1 TAB  &kp SPACE    &kp ENTER  &lt 2 ESC  &kp BSPC
+            &kp Q              &kp W               &kp E                &kp R                &kp T        &kp Y      &kp U                &kp I                &kp O               &kp P
+            &hrm_pinky LGUI A  &hrm_middle LALT S  &hrm_middle LCTRL D  &hrm_index LSHIFT F  &kp G        &kp H      &hrm_index RSHIFT J  &hrm_middle RCTRL K  &hrm_middle RALT L  &hrm_pinky RGUI SEMI
+&kp LSHIFT  &kp Z              &kp X               &kp C                &kp V                &kp B        &kp N      &kp M                &kp COMMA            &kp DOT             &kp FSLH              &kp SQT
+                                                   &kp LGUI             &lt 1 TAB            &kp SPACE    &kp ENTER  &lt 2 ESCAPE         &kp BACKSPACE
             >;
         };
 
@@ -96,7 +164,7 @@
             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7     &kp NUMBER_8    &kp NUMBER_9  &kp N0
             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &tog 6    &kp LEFT      &kp DOWN   &kp UP_ARROW    &kp RIGHT     &trans
 &caps_word  &bt BT_CLR    &trans        &trans        &trans        &trans    &trans        &trans     &kp DOWN_ARROW  &trans        &trans  &trans
-                                        &trans        &trans        &trans    &mo 3         &kp KP_N0  &trans
+                                        &trans        &trans        &trans    &mo 3         &kp KP_N0  &kp DEL
             >;
         };
 
