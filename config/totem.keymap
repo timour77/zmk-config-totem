@@ -137,10 +137,10 @@
 
         mac_base {
             bindings = <
-                &kp Q                       &kp W                     &kp E                &kp R                       &kp T                &kp Y                  &kp U                        &kp I                 &kp O                      &kp P
-                &hrm_pinky LGUI A           &hrm_middle LALT S        &hrm_middle LCTRL D  &hrm_index LSHIFT F          &kp G                &kp H                  &hrm_index RSHIFT J          &hrm_middle RCTRL K   &hrm_middle RALT L         &hrm_pinky RGUI SEMI
-&kp LSHIFT      &kp Z                       &kp X                     &kp C                &kp V                       &kp B                &kp N                  &kp M                        &kp COMMA             &kp DOT                    &kp FSLH               &kp SQT
-                                                                      &mt LGUI ESC         &lt 1 SPACE                  &mt LALT TAB         &mt LCTRL BSPC         &lt 2 RET                    &mt RSHIFT DEL
+            &kp Q              &kp W               &kp E                &kp R                &kp T        &kp Y      &kp U                &kp I                &kp O               &kp P
+            &hrm_pinky LGUI A  &hrm_middle LALT S  &hrm_middle LCTRL D  &hrm_index LSHIFT F  &kp G        &kp H      &hrm_index RSHIFT J  &hrm_middle RCTRL K  &hrm_middle RALT L  &hrm_pinky RGUI SEMI
+&kp LSHIFT  &kp Z              &kp X               &kp C                &kp V                &kp B        &kp N      &kp M                &kp COMMA            &kp DOT             &kp FSLH              &kp SQT
+                                                   &kp LGUI             &lt 1 TAB            &kp SPACE    &kp ENTER  &lt 2 ESCAPE         &kp BACKSPACE
             >;
         };
 
@@ -164,7 +164,7 @@
             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7     &kp NUMBER_8    &kp NUMBER_9  &kp N0
             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &tog 6    &kp LEFT      &kp DOWN   &kp UP_ARROW    &kp RIGHT     &trans
 &caps_word  &bt BT_CLR    &trans        &trans        &trans        &trans    &trans        &trans     &kp DOWN_ARROW  &trans        &trans  &trans
-                                        &trans        &trans        &trans    &mo 3         &kp KP_N0  &trans
+                                        &trans        &trans        &trans    &mo 3         &kp KP_N0  &kp DEL
             >;
         };
 
