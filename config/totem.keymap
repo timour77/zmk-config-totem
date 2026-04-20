@@ -117,10 +117,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DLLR       &kp PRCNT          &kp CARET       &kp AMPS   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &trans    &trans  &trans    &kp C_BRI_UP   &kp C_VOLUME_UP    &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans
-&trans  &trans    &trans  &trans    &kp C_BRI_DEC  &kp C_VOL_DN       &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE       &trans                 &trans
-                          &trans    &trans         &mo 3              &trans          &trans     &trans
+        &kp EXCL  &kp AT  &kp HASH   &kp DLLR       &kp PRCNT          &kp CARET       &kp AMPS   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+        &trans    &trans  &kp PSCRN  &kp C_BRI_UP   &kp C_VOLUME_UP    &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans
+&trans  &trans    &trans  &trans     &kp C_BRI_DEC  &kp C_VOL_DN       &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE       &trans                 &trans
+                          &trans     &trans         &mo 3              &trans          &trans     &trans
             >;
         };
 
