@@ -89,7 +89,7 @@
             bindings = <&kp BSPC>;
         };
 
-        combo_qw_tab {
+        combo_qw_pw {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&pw>;
