@@ -92,7 +92,7 @@
         combo_qw_tab {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp TAB>;
+            bindings = <&pw>;
         };
 
         combo_vb_delete {
